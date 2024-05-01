@@ -239,3 +239,46 @@ li {
   vertical-align: top;
   width: inherit;
 }
+
+#name-text {
+  color: rgba(247, 246, 245, 0.988);
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: -0.075rem;
+  width: 100%;
+  font-size: 2.625em;
+  line-height: 1.125;
+  font-weight: 600;
+}
+
+#name-text a {
+  text-decoration: none;
+}
+
+#name-text a:hover {
+  text-decoration: underline;
+}
+
+#name-text span.p:nth-child(n + 2) {
+  margin-top: 1rem;
+}
+
+#body-text {
+  color: rgba(232, 232, 232, 0.741);
+  font-family: 'Roboto', sans-serif;
+  font-size: 1em;
+  line-height: 2;
+  font-weight: 500;
+}
+
+#body-text a {
+  color: #fff2ed;
+  text-decoration: underline;
+}
+
+#body-text a:hover {
+  color: #ffe2bf;
+}
+
+#body-text span.p:nth-child(n + 2) {
+  margin-top: 1rem;
+}
