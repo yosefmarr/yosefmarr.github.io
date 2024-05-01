@@ -345,3 +345,95 @@ ul {
   vertical-align: middle;
   white-space: nowrap;
 }
+
+#networks {
+  font-size: 1.375em;
+  gap: 1.25rem;
+}
+
+#networks li a {
+  border-radius: 100%;
+  height: 2em;
+  width: 2em;
+  transition: transform 0.25s ease, color 0.25s ease,
+    background-color 0.25s ease, border-color 0.25s ease;
+}
+
+#networks li a img {
+  height: 60%;
+  width: 60%;
+  transition: fill 0.25s ease;
+}
+
+#networks a {
+  background-color: rgba(255, 255, 255, 0.11);
+}
+
+#networks a img {
+  filter: brightness(0) invert(1);
+}
+
+#networks a:hover {
+  background-color: rgba(255, 255, 255, 0.259) !important;
+}
+
+#networks li a + img {
+  transition: transform 0.25s ease, fill 0.25s ease, stroke 0.25s ease;
+}
+
+#networks li a:hover {
+  transform: scale(1.1475);
+}
+
+#networks li a:hover + img {
+  transform: scale(1.1475);
+}
+
+.icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  letter-spacing: 0;
+  padding: 0;
+}
+
+.icons li {
+  position: relative;
+  z-index: 1;
+}
+
+.icons li a {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.icons li a img {
+  display: block;
+  position: relative;
+}
+
+.icons li a + img {
+  display: block;
+  height: 100%;
+  left: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+.icons li a .label {
+  display: none;
+}
+
+a[onclick]:not([href]) {
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: underline;
+  transition: color 0.25s ease;
+}
