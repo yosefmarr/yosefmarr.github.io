@@ -32,6 +32,21 @@ li {
   vertical-align: baseline;
 }
 
+html {
+  font-size: 16pt;
+}
+
+body {
+  -webkit-text-size-adjust: none;
+  line-height: 1;
+  min-height: 100vh;
+  min-width: 320px;
+  overflow-x: hidden;
+  word-wrap: break-word;
+  background-color: #bbb7bd;
+  overflow: auto !important;
+}
+
 #wrapper {
   -webkit-overflow-scrolling: touch;
   align-items: center;
@@ -443,4 +458,112 @@ a {
   color: inherit;
   text-decoration: underline;
   transition: color 0.25s ease;
+}
+
+@media (max-width: 1680px) {
+  html {
+    font-size: 12pt;
+  }
+}
+
+@media (max-width: 1280px) {
+  html {
+    font-size: 12pt;
+  }
+}
+
+@media (max-width: 980px) {
+  html {
+    font-size: 10pt;
+  }
+}
+@media (max-width: 736px) {
+  html {
+    font-size: 11pt;
+  }
+  #wrapper {
+    padding: 1.75rem 1.75rem 1.75rem 1.75rem;
+  }
+  #main > .inner {
+    --padding-horizontal: 2.5rem;
+    --padding-vertical: 2.5rem;
+    --spacing: 1.5rem;
+  }
+  #container-body:not(:first-child) {
+    margin-top: 2.5rem !important;
+  }
+  #container-body:not(:last-child) {
+    margin-bottom: 2.5rem !important;
+  }
+  #container-body > .wrapper > .inner {
+    --gutters: 2rem;
+    --padding-vertical: 3rem;
+  }
+
+  #profile-picture:not(:first-child) {
+    margin-top: 1.5rem !important;
+  }
+  #profile-picture:not(:last-child) {
+    margin-bottom: 1.5rem !important;
+  }
+  #profile-picture .frame {
+    width: 7.5rem;
+  }
+  #name-text {
+    letter-spacing: -0.065625rem;
+    width: 100%;
+    font-size: 2.875em;
+    line-height: 1.125;
+  }
+  #body-text {
+    letter-spacing: 0rem;
+    width: 100%;
+    font-size: 1em;
+    line-height: 2;
+  }
+  #skills {
+    gap: 1rem;
+  }
+  #skills li a {
+    letter-spacing: 0rem;
+    font-size: 0.75em;
+  }
+  #networks {
+    font-size: 1.375em;
+    gap: 1.25rem;
+  }
+}
+@media (max-width: 480px) {
+  #wrapper {
+    padding: 0.75rem 0.75rem 0.75rem 0.75rem;
+  }
+  #main > .inner {
+    --spacing: 1.3125rem;
+  }
+}
+@media (max-width: 360px) {
+  #wrapper {
+    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+  }
+  #main > .inner {
+    --padding-horizontal: 1.875rem;
+    --padding-vertical: 1.875rem;
+    --spacing: 1.125rem;
+  }
+  #container-body > .wrapper > .inner {
+    --gutters: 1.5rem;
+    --padding-vertical: 2.25rem;
+  }
+  #name-text {
+    font-size: 2.875em;
+  }
+  #body-text {
+    font-size: 1em;
+  }
+  #skills {
+    gap: 0.75rem;
+  }
+  #networks {
+    gap: 0.9375rem;
+  }
 }
