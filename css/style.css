@@ -24,3 +24,172 @@ li {
   font: inherit;
   vertical-align: baseline;
 }
+
+#wrapper {
+  -webkit-overflow-scrolling: touch;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  overflow: hidden;
+  position: relative;
+  z-index: 2;
+  padding: 1.5rem 1.5rem 1.5rem 1.5rem;
+}
+
+#main {
+  align-items: center;
+  display: flex;
+  flex-grow: 0;
+  flex-shrink: 0;
+  justify-content: center;
+  max-width: 100%;
+  position: relative;
+  text-align: left;
+  z-index: 1;
+  background-color: #3c414d;
+  box-shadow: 0rem 1.75rem 3.125rem 0.25rem rgba(0, 0, 0, 0.388);
+  border-radius: 3rem 3rem 3rem 3rem;
+  transition: opacity 1.375s ease-in-out 0.25s;
+}
+
+#main > .inner {
+  --padding-horizontal: 3rem;
+  --padding-vertical: 2.5rem;
+  --spacing: 1.5rem;
+  border-radius: 3rem 3rem 3rem 3rem;
+  max-width: 100%;
+  position: relative;
+  width: 30rem;
+  z-index: 1;
+  padding: 2.5rem 3rem;
+}
+
+#main > .inner > * {
+  margin-top: var(--spacing);
+  margin-bottom: var(--spacing);
+}
+
+#main > .inner > :first-child {
+  margin-top: 0 !important;
+}
+
+#main > .inner > :last-child {
+  margin-bottom: 0 !important;
+}
+
+#main > .inner > .full {
+  margin-left: calc(var(--padding-horizontal) * -1);
+  max-width: calc(100% + calc(var(--padding-horizontal) * 2) + 0.4725px);
+  width: calc(100% + calc(var(--padding-horizontal) * 2) + 0.4725px);
+}
+
+#main > .inner > .full:first-child {
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+  margin-top: calc(var(--padding-vertical) * -1) !important;
+}
+
+#main > .inner > .full:last-child {
+  border-bottom-left-radius: inherit;
+  border-bottom-right-radius: inherit;
+  margin-bottom: calc(var(--padding-vertical) * -1) !important;
+}
+
+#main .container.full:first-child > .wrapper {
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+}
+
+#main .container.full:last-child > .wrapper {
+  border-bottom-left-radius: inherit;
+  border-bottom-right-radius: inherit;
+}
+
+#main .container.full:first-child > .wrapper > .inner {
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+}
+
+#main .container.full:last-child > .wrapper > .inner {
+  border-bottom-left-radius: inherit;
+  border-bottom-right-radius: inherit;
+}
+
+#container-body {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  background-color: #424752;
+}
+
+#container-body:not(:first-child) {
+  margin-top: 2.5rem !important;
+}
+
+#container-body:not(:last-child) {
+  margin-bottom: 2.5rem !important;
+}
+
+#container-body > .wrapper > .inner {
+  --gutters: 2rem;
+  --padding-vertical: 3.5rem;
+  padding: var(--padding-vertical) var(--padding-horizontal);
+}
+
+#container-body > .wrapper {
+  max-width: 30rem;
+  width: 100%;
+}
+
+#container-body.default > .wrapper > .inner > * {
+  margin-bottom: var(--spacing);
+  margin-top: var(--spacing);
+}
+
+#container-body.default > .wrapper > .inner > *:first-child {
+  margin-top: 0 !important;
+}
+
+#container-body.default > .wrapper > .inner > *:last-child {
+  margin-bottom: 0 !important;
+}
+
+#container-body.default > .wrapper > .inner > .full {
+  margin-left: calc(var(--padding-horizontal) * -1);
+  max-width: none !important;
+  width: calc(100% + (var(--padding-horizontal) * 2) + 0.4725px);
+}
+
+#container-body.default > .wrapper > .inner > .full:first-child {
+  margin-top: calc(var(--padding-vertical) * -1) !important;
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+}
+
+#container-body.default > .wrapper > .inner > .full:last-child {
+  margin-bottom: calc(var(--padding-vertical) * -1) !important;
+  border-bottom-left-radius: inherit;
+  border-bottom-right-radius: inherit;
+}
+
+.container {
+  position: relative;
+}
+
+.container > .wrapper {
+  vertical-align: top;
+  position: relative;
+  max-width: 100%;
+  border-radius: inherit;
+}
+
+.container > .wrapper > .inner {
+  vertical-align: top;
+  position: relative;
+  max-width: 100%;
+  border-radius: inherit;
+  text-align: var(--alignment);
+}
