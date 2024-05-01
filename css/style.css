@@ -193,3 +193,49 @@ li {
   border-radius: inherit;
   text-align: var(--alignment);
 }
+
+#profile-picture:not(:first-child) {
+  margin-top: 2rem !important;
+}
+
+#profile-picture:not(:last-child) {
+  margin-bottom: 2rem !important;
+}
+
+#profile-picture .frame {
+  width: 7.5rem;
+  border-radius: 100%;
+  border-color: rgba(240, 233, 230, 0.961);
+  border-style: solid;
+  border-width: 4px;
+  box-shadow: 0rem 1.75rem 2rem 0rem rgba(64, 64, 64, 0.122);
+  transition: none;
+}
+
+#profile-picture .frame img {
+  transition: none;
+}
+
+.image {
+  display: block;
+  line-height: 0;
+  max-width: 100%;
+  position: relative;
+}
+
+.image .frame {
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+  display: inline-block;
+  max-width: 100%;
+  overflow: hidden;
+  vertical-align: top;
+  width: 100%;
+}
+
+.image .frame img {
+  border-radius: 0 !important;
+  max-width: 100%;
+  vertical-align: top;
+  width: inherit;
+}
